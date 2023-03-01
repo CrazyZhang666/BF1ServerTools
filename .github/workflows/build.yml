@@ -1,0 +1,57 @@
+name: "build"
+on:
+  push:
+  workflow_dispatch:
+
+env:
+  VS_VERSION: "[17.4,17.5)" # 包括17.4但不包括17.5
+  wetransfer: true
+  TZ: Asia/Shanghai
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      # 添加MSBuild到系统环境变量
+      - name: Add msbuild to PATH
+        uses: microsoft/setup-msbuild@v1.1
+        with:
+          vs-version: ${{ env.VS_VERSION }}
+
+      # 开始编译
+      - name: Compile
+        id: Compile
+        run: msbuild -restore -p:Configuration=Release -p:OutputPath=..\output\BF1ServerTools BF1ServerTools.sln
+
+      # 压缩编译输出
+      - name: Compress output
+        id: Compress
+        if: steps.Compile.outcome == 'success'
+        run: |
+          Compress-Archive -Path .\output\BF1ServerTools -DestinationPath .\output\BF1ServerTools.zip
+
+      # 上传wetransfer
+      - name: Upload to WeTransfer
+        id: wetransfer
+        if: steps.Compress.outcome == 'success' && env.wetransfer == 'true' && !cancelled()
+        run: |
+          Start-BitsTransfer -Source https://github.com/Mikubill/transfer/releases/download/v0.4.17/transfer_0.4.17_windows_amd64.zip -Destination .
+          Expand-Archive -Path .\transfer_0.4.17_windows_amd64.zip -DestinationPath .
+          .\transfer.exe wet -s --no-progress .\output\BF1ServerTools.zip
+
+      # 上传GitHub Action Artifact
+      - name: Upload to Artifact
+        if: steps.Compile.outcome == 'success' && !cancelled()
+        uses: actions/upload-artifact@main
+        with:
+          name: BF1ServerTools
+          path: .\output
+
+      - name: Delete workflow runs
+        uses: GitRML/delete-workflow-runs@main
+        with:
+          retain_days: 1
+          keep_minimum_runs: 3
