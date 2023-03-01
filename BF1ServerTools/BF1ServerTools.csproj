@@ -45,7 +45,6 @@
 		<Resource Include="Assets\Images\DLC\DLC6.jpg" />
 		<Resource Include="Assets\Images\Favicon.ico" />
 		<Resource Include="Assets\Images\Launch.png" />
-		<Resource Include="Assets\Images\Other\Afdian.png" />
 		<Resource Include="Assets\Images\Other\Avatar.jpg" />
 		<Resource Include="Assets\Images\Other\BF1.png" />
 	</ItemGroup>

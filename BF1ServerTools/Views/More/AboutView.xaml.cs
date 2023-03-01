@@ -17,9 +17,4 @@ public partial class AboutView : UserControl
         ProcessUtil.OpenPath(e.Uri.OriginalString);
         e.Handled = true;
     }
-
-    private void TextBlock_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-    {
-        ProcessUtil.OpenPath("https://afdian.net/@crazyzhang");
-    }
 }

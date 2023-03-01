@@ -36,8 +36,9 @@
             FontSize="14"
             Text="Copyright© 2020-2022 DS By CrazyZhang666, Support By Coloryr, B_bili22" />
         <Border
+            Width="200"
             Margin="10"
-            Padding="10,0,10,0"
+            Padding="10"
             HorizontalAlignment="Center"
             BorderBrush="Gray"
             BorderThickness="0,1,0,1"
@@ -64,40 +65,6 @@
                         &#xe677;
                     </Hyperlink>
                 </TextBlock>
-                <!--  ################################  -->
-                <Border
-                    Margin="15,10,15,10"
-                    BorderBrush="Gray"
-                    BorderThickness="1,0,0,0"
-                    SnapsToDevicePixels="True" />
-                <!--  ################################  -->
-                <TextBlock
-                    Padding="0,0,10,0"
-                    VerticalAlignment="Center"
-                    Cursor="Hand"
-                    FontSize="18"
-                    FontWeight="Bold"
-                    Foreground="#8563dd"
-                    MouseLeftButtonDown="TextBlock_MouseLeftButtonDown"
-                    Text="捐赠作者"
-                    ToolTip="https://afdian.net/@crazyzhang" />
-                <Image
-                    Height="50"
-                    Cursor="Hand"
-                    MouseLeftButtonDown="TextBlock_MouseLeftButtonDown"
-                    Source="/Assets/Images/Other/Afdian.png"
-                    Style="{StaticResource ImageStyle_HighQuality}"
-                    ToolTip="https://afdian.net/@crazyzhang" />
-                <TextBlock
-                    Padding="10,0,0,0"
-                    VerticalAlignment="Center"
-                    Cursor="Hand"
-                    FontSize="24"
-                    FontWeight="Bold"
-                    Foreground="#8563dd"
-                    MouseLeftButtonDown="TextBlock_MouseLeftButtonDown"
-                    Text="爱发电"
-                    ToolTip="https://afdian.net/@crazyzhang" />
             </StackPanel>
         </Border>
         <!--  ################################  -->
