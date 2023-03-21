@@ -3,7 +3,6 @@
 一个方便服主和管理员管理服务器的综合工具
 
 * [交流群：710801277](https://jq.qq.com/?_wv=1027&amp;k=ajEymecs)  
-* [爱发电](https://afdian.net/@crazyzhang)
 
 ## 编译
 

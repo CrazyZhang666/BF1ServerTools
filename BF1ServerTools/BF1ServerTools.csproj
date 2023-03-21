@@ -7,8 +7,8 @@
 		<UseWPF>true</UseWPF>
 		<Platforms>x64</Platforms>
 		<StartupObject>BF1ServerTools.App</StartupObject>
-		<AssemblyVersion>3.0.1.6</AssemblyVersion>
-		<FileVersion>3.0.1.6</FileVersion>
+		<AssemblyVersion>3.0.1.8</AssemblyVersion>
+		<FileVersion>3.0.1.8</FileVersion>
 		<ApplicationManifest>Properties\app.manifest</ApplicationManifest>
 		<ApplicationIcon>Assets\Images\Favicon.ico</ApplicationIcon>
 		<IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
@@ -45,7 +45,6 @@
 		<Resource Include="Assets\Images\DLC\DLC6.jpg" />
 		<Resource Include="Assets\Images\Favicon.ico" />
 		<Resource Include="Assets\Images\Launch.png" />
-		<Resource Include="Assets\Images\Other\Afdian.png" />
 		<Resource Include="Assets\Images\Other\Avatar.jpg" />
 		<Resource Include="Assets\Images\Other\BF1.png" />
 	</ItemGroup>
