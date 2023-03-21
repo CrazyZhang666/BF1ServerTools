@@ -5,7 +5,7 @@ on:
 
 env:
   VS_VERSION: "[17.4,17.5)" # 包括17.4但不包括17.5
-  wetransfer: false
+  wetransfer: true
   TZ: Asia/Shanghai
 
 jobs:
