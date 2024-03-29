@@ -1,8 +1,10 @@
 ## 公告
 
 > 2023/05/01 该工具已暂停开发
+> 
+> 4.0版本已弃坑，如果想查看3.0版本完整代码，请看这里：https://github.com/CrazyZhang666/BF1ServerTools/releases/tag/3.00
 
-> 新项目：https://github.com/CrazyZhang666/BF1ClientAPI
+> 新项目（私有项目，如果想查看源码请联系我）：https://github.com/CrazyZhang666/BF1ClientAPI
 
 ## 战地1服务器管理工具
 
